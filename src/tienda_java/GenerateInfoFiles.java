@@ -6,9 +6,9 @@ import java.util.Random;
 
 public class GenerateInfoFiles {
 
-    private static final String[] FIRST_NAMES = {"Juan", "Maria", "Carlos", "Ana", "Luis", "Laura"};
-    private static final String[] LAST_NAMES = {"Gomez", "Rodriguez", "Lopez", "Martinez", "Garcia", "Perez"};
-    private static final String[] PRODUCT_NAMES = {"Laptop", "Smartphone", "Tablet", "Monitor", "Keyboard", "Mouse"};
+    private static final String[] NOMBRES = {"Juan", "Maria", "Carlos", "Ana", "Luis", "Laura"};
+    private static final String[] APELLIDOS = {"Gomez", "Rodriguez", "Lopez", "Martinez", "Garcia", "Perez"};
+    private static final String[] NOMBRES_PRODUCTOS = {"Laptop", "Smartphone", "Tablet", "Monitor", "Teclado", "Ratón"};
     private static final Random random = new Random();
 
     public static void main(String[] args) {
@@ -24,7 +24,7 @@ public class GenerateInfoFiles {
 
     public static void createSalesMenFiles(int randomSalesCount) throws IOException {
         for (int i = 1; i <= randomSalesCount; i++) {
-            String fileName = "salesman_" + i + ".txt";
+            String fileName = "vendedor-" + i + ".txt";
             try (FileWriter writer = new FileWriter(fileName)) {
                 String documentType = "CC";
                 long documentNumber = 10000000L + i;
@@ -40,9 +40,9 @@ public class GenerateInfoFiles {
     }
 
     public static void createProductsFile(int productsCount) throws IOException {
-        try (FileWriter writer = new FileWriter("products.txt")) {
+        try (FileWriter writer = new FileWriter("productos.txt")) {
             for (int i = 1; i <= productsCount; i++) {
-                String productName = PRODUCT_NAMES[random.nextInt(PRODUCT_NAMES.length)];
+                String productName = NOMBRES_PRODUCTOS[random.nextInt(NOMBRES_PRODUCTOS.length)];
                 double price = 50 + random.nextInt(500);
                 writer.write(i + ";" + productName + ";" + price + "\n");
             }
@@ -50,14 +50,16 @@ public class GenerateInfoFiles {
     }
 
     public static void createSalesManInfoFile(int salesmanCount) throws IOException {
-        try (FileWriter writer = new FileWriter("salesmen_info.txt")) {
+        try (FileWriter writer = new FileWriter("informacion_vendedores.txt")) {
             for (int i = 1; i <= salesmanCount; i++) {
                 String documentType = "CC";
                 long documentNumber = 10000000L + i;
-                String firstName = FIRST_NAMES[random.nextInt(FIRST_NAMES.length)];
-                String lastName = LAST_NAMES[random.nextInt(LAST_NAMES.length)];
+                String firstName = NOMBRES[random.nextInt(NOMBRES.length)];
+                String lastName = APELLIDOS[random.nextInt(APELLIDOS.length)];
                 writer.write(documentType + ";" + documentNumber + ";" + firstName + ";" + lastName + "\n");
             }
         }
     }
 }
+
+
