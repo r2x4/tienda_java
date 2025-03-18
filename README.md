@@ -8,7 +8,10 @@
 
 - Estado del proyecto: en construccion.
 
-#Imagenes Proyecto ![gererate_java](https://github.com/user-attachments/assets/e2d5058d-9b7f-4c2b-a596-a57418762788)
-![sales_report](https://github.com/user-attachments/assets/25480498-764e-4f6b-a626-a2aea98e3552)
-![excel_report](https://github.com/user-attachments/assets/0886f48b-4366-4b75-9c42-f1b3e47d06f4)
-![txt_vendedor_ejemplo](https://github.com/user-attachments/assets/d94d7254-904e-41a6-8c78-90156333ce32)
+#Imagenes Proyecto 
+
+![gererate_java](https://github.com/user-attachments/assets/07588e28-3169-450a-98c9-bf6d0194ea84)
+![Main_java1](https://github.com/user-attachments/assets/5646c8a1-590c-496f-a1a3-728e4406eed9)
+![excel_report](https://github.com/user-attachments/assets/164c0a76-ab27-4a9f-83b4-6eb3fc00153b)
+![sales_report](https://github.com/user-attachments/assets/a88beb43-6fb8-49c5-92c9-728c38e68f42)
+![txt_vendedor_ejemplo](https://github.com/user-attachments/assets/3248ab9e-4f6a-44a2-a576-76c898398181)
