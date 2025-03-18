@@ -1,0 +1,10 @@
+1;Tablet;357.0
+2;Tablet;359.0
+3;Monitor;411.0
+4;Mouse;544.0
+5;Monitor;251.0
+6;Tablet;102.0
+7;Monitor;161.0
+8;Smartphone;244.0
+9;Smartphone;92.0
+10;Keyboard;255.0
