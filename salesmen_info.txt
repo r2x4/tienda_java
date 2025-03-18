@@ -1,5 +1,0 @@
-CC;10000001;Juan;Garcia
-CC;10000002;Carlos;Lopez
-CC;10000003;Carlos;Martinez
-CC;10000004;Carlos;Gomez
-CC;10000005;Laura;Gomez
