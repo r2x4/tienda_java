@@ -10,8 +10,7 @@
 
 #Imagenes Proyecto 
 
-![gererate_java](https://github.com/user-attachments/assets/07588e28-3169-450a-98c9-bf6d0194ea84)
-![Main_java1](https://github.com/user-attachments/assets/5646c8a1-590c-496f-a1a3-728e4406eed9)
-![excel_report](https://github.com/user-attachments/assets/164c0a76-ab27-4a9f-83b4-6eb3fc00153b)
-![sales_report](https://github.com/user-attachments/assets/a88beb43-6fb8-49c5-92c9-728c38e68f42)
-![txt_vendedor_ejemplo](https://github.com/user-attachments/assets/3248ab9e-4f6a-44a2-a576-76c898398181)
+![Main_final](https://github.com/user-attachments/assets/29560e18-33b4-4f86-96ef-695a42daa72f)
+![GenerateFinal](https://github.com/user-attachments/assets/e3b6c514-c1e3-4053-92aa-e370b94e1456)
+![txt_generate](https://github.com/user-attachments/assets/08192b11-2a0d-4007-8a77-901a120659f5)
+![excel_product_generate](https://github.com/user-attachments/assets/60c4b1db-d582-4b41-a5a6-ccb7f86630ef)
