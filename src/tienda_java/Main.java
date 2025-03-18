@@ -43,7 +43,7 @@ public class GenerateInfoFiles {
         try (FileWriter writer = new FileWriter("productos.txt")) {
             for (int i = 1; i <= cantidadProductos; i++) {
                 String nombreProducto = NOMBRES_PRODUCTOS[random.nextInt(NOMBRES_PRODUCTOS.length)];
-                double precio = 50 + random.nextInt(500);  // Precios entre 50 y 550
+                double precio = 50 + random.nextInt(500);  
                 writer.write(i + ";" + nombreProducto + ";" + precio + "\n");
             }
         }
