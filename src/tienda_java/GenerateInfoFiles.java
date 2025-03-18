@@ -10,23 +10,6 @@ public class GenerateInfoFiles {
     static Map<String, Vendedor> vendedores = new HashMap<>();
     static List<Venta> ventas = new ArrayList<>();
 
-    public static void main(String[] args) {
-        try {
-            cargarProductos("C:\\Users\\rrs23\\OneDrive\\Documentos\\OneDrive\\Documentos\\Datos_java\\productos.csv");
-            cargarVendedores("C:\\Users\\rrs23\\OneDrive\\Documentos\\OneDrive\\Documentos\\Datos_java\\vendedores.csv"); 
-            cargarVentas("C:\\Users\\rrs23\\OneDrive\\Documentos\\OneDrive\\Documentos\\Datos_java\\ventas.csv");
-
-            generarArchivoProductos("productos.txt");
-            generarArchivoVendedores("informacion_vendedores.txt");
-            generarArchivoVentas("ventas.txt");
-
-            System.out.println("Archivos generados exitosamente.");
-        } catch (IOException e) {
-            System.err.println("Error generando archivos: " + e.getMessage());
-        }
-    }
-
-
     // Cargar productos desde el archivo CSV
     public static void cargarProductos(String archivo) throws IOException {
         BufferedReader reader = new BufferedReader(new FileReader(archivo));
@@ -79,31 +62,55 @@ public class GenerateInfoFiles {
         reader.close();
     }
 
-    // Generar archivo de productos (productos.txt)
-    public static void generarArchivoProductos(String archivo) throws IOException {
-        FileWriter writer = new FileWriter(archivo);
+    // Generar archivo de productos (productos.txt y productos.csv)
+    public static void generarArchivoProductos(String archivoTxt, String archivoCsv) throws IOException {
+        // Generar archivo TXT
+        FileWriter writerTxt = new FileWriter(archivoTxt);
         for (Producto producto : productos.values()) {
-            writer.write(producto.getId() + ";" + producto.getNombre() + ";" + producto.getPrecio() + "\n");
+            writerTxt.write(producto.getId() + ";" + producto.getNombre() + ";" + producto.getPrecio() + "\n");
         }
-        writer.close();
+        writerTxt.close();
+
+        // Generar archivo CSV
+        FileWriter writerCsv = new FileWriter(archivoCsv);
+        for (Producto producto : productos.values()) {
+            writerCsv.write(producto.getId() + "," + producto.getNombre() + "," + producto.getPrecio() + "\n");
+        }
+        writerCsv.close();
     }
 
-    // Generar archivo de vendedores (informacion_vendedores.txt)
-    public static void generarArchivoVendedores(String archivo) throws IOException {
-        FileWriter writer = new FileWriter(archivo);
+    // Generar archivo de vendedores (informacion_vendedores.txt y vendedores.csv)
+    public static void generarArchivoVendedores(String archivoTxt, String archivoCsv) throws IOException {
+        // Generar archivo TXT
+        FileWriter writerTxt = new FileWriter(archivoTxt);
         for (Vendedor vendedor : vendedores.values()) {
-            writer.write(vendedor.getId() + ";" + vendedor.getTipoDocumento() + ";" + vendedor.getNumeroDocumento() + ";" + vendedor.getNombre() + ";" + vendedor.getApellido() + "\n");
+            writerTxt.write(vendedor.getId() + ";" + vendedor.getTipoDocumento() + ";" + vendedor.getNumeroDocumento() + ";" + vendedor.getNombre() + ";" + vendedor.getApellido() + "\n");
         }
-        writer.close();
+        writerTxt.close();
+
+        // Generar archivo CSV
+        FileWriter writerCsv = new FileWriter(archivoCsv);
+        for (Vendedor vendedor : vendedores.values()) {
+            writerCsv.write(vendedor.getId() + "," + vendedor.getTipoDocumento() + "," + vendedor.getNumeroDocumento() + "," + vendedor.getNombre() + "," + vendedor.getApellido() + "\n");
+        }
+        writerCsv.close();
     }
 
-    // Generar archivo de ventas (ventas.txt)
-    public static void generarArchivoVentas(String archivo) throws IOException {
-        FileWriter writer = new FileWriter(archivo);
+    // Generar archivo de ventas (ventas.txt y ventas.csv)
+    public static void generarArchivoVentas(String archivoTxt, String archivoCsv) throws IOException {
+        // Generar archivo TXT
+        FileWriter writerTxt = new FileWriter(archivoTxt);
         for (Venta venta : ventas) {
-            writer.write(venta.getVendedor().getId() + ";" + venta.getProducto().getId() + ";" + venta.getCantidad() + "\n");
+            writerTxt.write(venta.getVendedor().getId() + ";" + venta.getProducto().getId() + ";" + venta.getCantidad() + "\n");
         }
-        writer.close();
+        writerTxt.close();
+
+        // Generar archivo CSV
+        FileWriter writerCsv = new FileWriter(archivoCsv);
+        for (Venta venta : ventas) {
+            writerCsv.write(venta.getVendedor().getId() + "," + venta.getProducto().getId() + "," + venta.getCantidad() + "\n");
+        }
+        writerCsv.close();
     }
 
     // Clases internas para representar productos, vendedores y ventas
@@ -192,6 +199,7 @@ public class GenerateInfoFiles {
         }
     }
 }
+
 
 
 
