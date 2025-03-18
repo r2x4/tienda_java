@@ -1,0 +1,10 @@
+001;Laptop;3500000.0
+002;Smartphone;1500000.0
+003;Tablet;800000.0
+004;Monitor;1200000.0
+005;Teclado;150000.0
+006;Rat�n;100000.0
+007;Auriculares;200000.0
+008;Impresora;500000.0
+009;C�mara;1800000.0
+010;Proyector;2500000.0
